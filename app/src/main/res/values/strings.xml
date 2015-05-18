@@ -3,4 +3,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_alive_ecg_">AliveECG_Activity</string>
+    <string name="title_activity_pulse_oxy_">PulseOxy_Activity</string>
+    <string name="title_activity_bp_">BP_Activity</string>
+    <string name="title_activity_collective_">Collective_Activity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_setting_">Setting_Activity</string>
 </resources>

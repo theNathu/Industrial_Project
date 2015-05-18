@@ -16,6 +16,47 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AliveECG_Activity"
+            android:label="@string/title_activity_alive_ecg_"
+            android:parentActivityName=".MainMenuActivity" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.nikhil.industrial_project.MainMenuActivity" />
+
+        <activity
+            android:name=".PulseOxy_Activity"
+            android:label="@string/title_activity_pulse_oxy_"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nikhil.industrial_project.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".BP_Activity"
+            android:label="@string/title_activity_bp_"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nikhil.industrial_project.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".Collective_Activity"
+            android:label="@string/title_activity_collective_"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nikhil.industrial_project.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".Setting_Activity"
+            android:label="@string/title_activity_setting_"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nikhil.industrial_project.MainMenuActivity" />
+        </activity>
     </application>
 
 </manifest>
