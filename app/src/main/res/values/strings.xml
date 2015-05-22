@@ -3,10 +3,27 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
     <string name="title_activity_alive_ecg_">AliveECG_Activity</string>
     <string name="title_activity_pulse_oxy_">PulseOxy_Activity</string>
     <string name="title_activity_bp_">BP_Activity</string>
     <string name="title_activity_collective_">Collective_Activity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_setting_">Setting_Activity</string>
+    <string name="po_settings_button">Pulse Oximeter</string>
+    <string name="hm_settings_button">Heart Monitor</string>
+    <string name="bp_settings_button">Blood Pressure Cuff</string>
+    <string name="device_settings_title">Device Settings</string>
+    <string name="title_activity_device_list">DeviceList</string>
+    <string name="title_activity_pulse_oximeter_preferences">Pulse Oximeter Preferences</string>
+    <string name="title_activity_blood_pressure_cuff_preferences">Blood Pressure Cuff Preferences</string>
+    <string name="title_activity_heart_monitor_preferences">Heart Monitor Preferences</string>
+    <string name="title_activity_pulse_oxi_settings">PulseOxiSettings</string>
+
+    <string name="button_scan">Search</string>
+    <string name="scanning">"Searching&#8230;"</string>
+    <string name="select_device">Select Device</string>
+    <string name="none_found">No Devices found</string>
+    <string name="hmservice_running">Alive Heart Monitor App is running</string>
+    <string name="scan_for_device">Scan for Bluetooth Devices</string>
 </resources>

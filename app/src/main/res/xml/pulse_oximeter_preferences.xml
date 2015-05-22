@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:key="pulse_oximeter"
+        android:summary="Pulse Oximeter has not been set"
+        android:title="Nonin Pulse Oximeter" >
+    </Preference>
+
+    <CheckBoxPreference
+        android:key="keep_screen_on"
+        android:defaultValue="true"
+        android:summary="Prevent the screen from automatically turning off when recording."
+        android:title="Keep screen on" />
+
+
+    <Preference
+        android:key="test_pref"
+        android:summary="Test Test Test"
+        android:title="About" >
+    </Preference>
+
+
+</PreferenceScreen>

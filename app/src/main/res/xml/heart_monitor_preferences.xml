@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:key="heart_monitor"
+        android:summary="Alive Heart Monitor has not been set"
+        android:title="Alive Heart Monitor" >
+    </Preference>
+
+    <CheckBoxPreference
+        android:key="keep_screen_on"
+        android:defaultValue="true"
+        android:summary="Prevent the screen from automatically turning off when recording."
+        android:title="Keep screen on" />
+
+    <Preference
+        android:key="about_app"
+        android:summary="Alive Heart Monitor Sample App version 1.0.0\n2014 Alive Technologies Pty Ltd."
+        android:title="About" >
+    </Preference>
+
+</PreferenceScreen>
