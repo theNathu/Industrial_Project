@@ -63,10 +63,10 @@
                 android:value="com.example.nikhil.industrial_project.MainMenuActivity" />
         </activity>
 
-        <activity android:name=".BTDeviceListActivity"></activity>
+        <activity android:name=".preferences.BTDeviceListActivity"></activity>
 
         <activity
-            android:name=".PulseOximeterPreferences"
+            android:name=".preferences.PulseOximeterPreferences"
             android:label="@string/title_activity_pulse_oximeter_preferences" >
             <intent-filter>
                 <action android:name="android.support.PARENT_ACTIVITY" />
@@ -76,7 +76,7 @@
         </activity>
 
         <activity
-            android:name=".HeartMonitorPreferences"
+            android:name=".preferences.HeartMonitorPreferences"
             android:label="@string/title_activity_heart_monitor_preferences" >
             <intent-filter>
                 <action android:name="android.support.PARENT_ACTIVITY" />
@@ -86,7 +86,7 @@
         </activity>
 
         <activity
-            android:name=".BloodPressureCuffPreferences"
+            android:name=".preferences.BloodPressureCuffPreferences"
             android:label="@string/title_activity_blood_pressure_cuff_preferences" >
             <intent-filter>
                 <action android:name="android.support.PARENT_ACTIVITY" />

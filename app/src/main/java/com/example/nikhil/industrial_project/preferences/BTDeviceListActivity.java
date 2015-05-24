@@ -1,6 +1,6 @@
 // BTDeviceListActivity.java
 // Alive Technologies
-package com.example.nikhil.industrial_project;
+package com.example.nikhil.industrial_project.preferences;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -22,6 +22,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.example.nikhil.industrial_project.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

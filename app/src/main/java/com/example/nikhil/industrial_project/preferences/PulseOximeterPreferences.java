@@ -1,6 +1,6 @@
 // AppPreferences.java
 // Alive Technologies
-package com.example.nikhil.industrial_project;
+package com.example.nikhil.industrial_project.preferences;
 
 
 import android.app.Activity;
@@ -16,6 +16,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.view.MenuItem;
+
+import com.example.nikhil.industrial_project.R;
 
 /**
  * PulseOximeterPreferences, using a single fragment in an activity.

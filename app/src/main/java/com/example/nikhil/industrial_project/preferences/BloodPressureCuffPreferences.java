@@ -1,6 +1,6 @@
 // AppPreferences.java
 // Alive Technologies
-package com.example.nikhil.industrial_project;
+package com.example.nikhil.industrial_project.preferences;
 
 
 import android.app.Activity;
@@ -17,15 +17,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
+import com.example.nikhil.industrial_project.R;
+
 /**
- * AppPreferences, using a single fragment in an activity.
+ * PulseOximeterPreferences, using a single fragment in an activity.
  */
-public class HeartMonitorPreferences extends ActionBarActivity {
+public class BloodPressureCuffPreferences extends ActionBarActivity {
 	@SuppressWarnings("unused")
-	private static final String TAG = "AppPreferences";
+	private static final String TAG = "BloodPressureCuffPreferences";
 	
-	public static final String PREF_HM_BTNAME = "heart_monitor_btname";
-	public static final String PREF_HM_BTADDRESS = "heart_monitor_btaddress";
+	public static final String PREF_BP_BTNAME = "blood_pressure_cuff_btname";
+	public static final String PREF_BP_BTADDRESS = "blood_pressure_cuff_btaddress";
 	public static final String PREF_KEEP_SCREEN_ON = "keep_screen_on";
 	public static final String PREF_NETWORK_COUNTRY_CODE = "network_country_code"; // Country code from last time connected on GSM network
 	
@@ -65,7 +67,7 @@ public class HeartMonitorPreferences extends ActionBarActivity {
 	
 	
 	public static class PrefsFragment extends PreferenceFragment {
-		private static final String KEY_HEART_MONITOR = "heart_monitor";
+		private static final String KEY_BLOOD_PRESSURE_CUFF = "blood_pressure_cuff";
 		//private static final String KEY_KEEP_SCREEN_ON = "keep_screen_on";
 		private static final String KEY_ABOUT_APP = "about_app";
 				
@@ -76,10 +78,10 @@ public class HeartMonitorPreferences extends ActionBarActivity {
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 	        final Activity activity = getActivity();
-			addPreferencesFromResource(R.xml.heart_monitor_preferences);
+			addPreferencesFromResource(R.xml.blood_pressure_cuff_preferences);
 			
 	        // Get the custom preference
-	        Preference customPref = (Preference) findPreference(KEY_HEART_MONITOR);
+	        Preference customPref = (Preference) findPreference(KEY_BLOOD_PRESSURE_CUFF);
 	        customPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 				public boolean onPreferenceClick(Preference preference) {
 		            // Launch the DeviceListActivity to see devices and do scan
@@ -87,8 +89,8 @@ public class HeartMonitorPreferences extends ActionBarActivity {
 		            startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
 					return true;
 				}
-	        });
-	        String hmName = getSharedPreferences(activity).getString(PREF_HM_BTNAME, null);
+			});
+	        String hmName = getSharedPreferences(activity).getString(PREF_BP_BTNAME, null);
 	        if(!TextUtils.isEmpty(hmName)) {
 	        	customPref.setSummary(hmName);
 	        }else {
@@ -111,19 +113,19 @@ public class HeartMonitorPreferences extends ActionBarActivity {
 	            // When DeviceListActivity returns with a device to connect
 	            if (resultCode == Activity.RESULT_OK) {
 	                // Get the device MAC address
-	            	String prefHeartMonitorBTName = data.getExtras().getString(BTDeviceListActivity.EXTRA_DEVICE_NAME);
-	            	String prefHeartMonitorBTAddress = data.getExtras().getString(BTDeviceListActivity.EXTRA_DEVICE_ADDRESS);
-	                if(prefHeartMonitorBTName==null || prefHeartMonitorBTName.length()==0) {
-	                	prefHeartMonitorBTName = prefHeartMonitorBTAddress;
+	            	String prefBloodPressureCuffBTName = data.getExtras().getString(BTDeviceListActivity.EXTRA_DEVICE_NAME);
+	            	String prefBloodPressureCuffBTAddress = data.getExtras().getString(BTDeviceListActivity.EXTRA_DEVICE_ADDRESS);
+	                if(prefBloodPressureCuffBTName==null || prefBloodPressureCuffBTName.length()==0) {
+	                	prefBloodPressureCuffBTName = prefBloodPressureCuffBTAddress;
 	                }
 	                SharedPreferences.Editor editor = getPreferenceScreen().getEditor();
-	                editor.putString(PREF_HM_BTNAME,prefHeartMonitorBTName);
-	                editor.putString(PREF_HM_BTADDRESS,prefHeartMonitorBTAddress);
+	                editor.putString(PREF_BP_BTNAME,prefBloodPressureCuffBTName);
+	                editor.putString(PREF_BP_BTADDRESS,prefBloodPressureCuffBTAddress);
 	                editor.commit();
 	                
-	    			// Update summary in case heart monitor changed
-	                Preference customPref = (Preference) findPreference(KEY_HEART_MONITOR);
-	                customPref.setSummary(prefHeartMonitorBTName);
+	    			// Update summary in case blood pressure cuff changed
+	                Preference customPref = (Preference) findPreference(KEY_BLOOD_PRESSURE_CUFF);
+	                customPref.setSummary(prefBloodPressureCuffBTName);
 	            }
 	            break;
 	        }

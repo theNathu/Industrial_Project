@@ -3,9 +3,11 @@ package com.example.nikhil.industrial_project;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+
+import com.example.nikhil.industrial_project.preferences.BloodPressureCuffPreferences;
+import com.example.nikhil.industrial_project.preferences.HeartMonitorPreferences;
+import com.example.nikhil.industrial_project.preferences.PulseOximeterPreferences;
 
 //TODO Andries
 public class Setting_Activity extends ActionBarActivity implements View.OnClickListener {
